@@ -156,6 +156,7 @@ body
         .about__img
 
         .about__content
+            padding-bottom: 17.8rem
             .title
                 position: relative
                 &::after
@@ -167,4 +168,77 @@ body
                     width: 150%;
                     margin-left: -20%
                     background: #0f3341
+
+.awesome-list
+    list-style-type: none
+    margin-left: 5.5rem
+
+    .awesome-list__item
+        margin-top: 6.5rem
+        position: relative
+        &::before
+            position: absolute
+            content: " "
+            width: 2px
+            background: black
+            height: 160%
+            left: -6.5rem
+            background: #6992b7
+        &:last-child
+            &::before
+                content: none
+    .awesome-list__title
+        font-family: "OSEB"
+        font-size: 3.9rem
+        margin-bottom: 0
+        position: relative
+
+        &::before
+            content: " "
+            position: absolute
+            left: -9rem
+            width: 5rem
+            height: 5rem
+            border-radius: 50%
+            background: #6992b7
+            
+
+
+    .awesome-list__content
+        margin-top: 0.5rem
+        font-family: "PBR"
+        font-size: 3rem
+
+        &.awesome-list__content--sm
+            max-width: 55.6rem
+        &.awesome-list__content--md
+            max-width: 70.7rem
+
+        
+
+#block-client
+    background: url(../img/when.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    .container
+        margin-left: 43%;
+        padding-top: 10rem
+        padding-bottom: 5rem
+        .title
+            font-family: "OSEB"
+            text-transform: uppercase
+            margin-top: 0
+            font-size: 6.5rem
+            max-width: 90rem
+            position: relative
+            &:after
+                content: " "
+                display: block;
+                width: 110%;
+                height: 2px;
+                background: #0f3341;
+        
+
+
 @import "media" // Всегда в конце
