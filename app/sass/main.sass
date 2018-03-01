@@ -1,14 +1,14 @@
 @import "fonts"
 @import "libs"
-@import "base"
 @import "vars"
+@import "base"
 
 body
     color: #0f3341;
 .container
     
 .header-line
-    font-family: 'PBR'
+    font-family: $stock_font
     text-transform: uppercase
     position: relative
     z-index: 2
@@ -33,7 +33,7 @@ body
 
 
     .header-img__year
-        font-family: 'OSEB'
+        font-family: $bold_font
         width: 15rem
         height: 16rem
         background: white
@@ -109,7 +109,7 @@ body
         max-width: 59rem
         font-size: 3rem
         .title
-            font-family: 'OSEB'
+            font-family: $bold_font
             text-transform: uppercase
             margin-top: 0
             margin-bottom: 7.7rem
@@ -188,7 +188,7 @@ body
             &::before
                 content: none
     .awesome-list__title
-        font-family: "OSEB"
+        font-family: $bold_font
         font-size: 3.9rem
         margin-bottom: 0
         position: relative
@@ -206,7 +206,7 @@ body
 
     .awesome-list__content
         margin-top: 0.5rem
-        font-family: "PBR"
+        font-family: $stock_font
         font-size: 3rem
 
         &.awesome-list__content--sm
@@ -226,7 +226,7 @@ body
         padding-top: 10rem
         padding-bottom: 5rem
         .title
-            font-family: "OSEB"
+            font-family: $bold_font
             text-transform: uppercase
             margin-top: 0
             font-size: 6.5rem
@@ -240,5 +240,120 @@ body
                 background: #0f3341;
         
 
+.block-title
+    font-family: $bold_font
+    text-transform: uppercase
+    font-size: 6.5rem
+    color: #0f3341
+    margin-left: 14rem
 
+.training-set
+    display: flex;
+    justify-content: center
+    flex-wrap: wrap
+
+    .training-set__item
+        padding-bottom: 5.8rem
+        padding-left: 3rem
+        padding-right: 3rem
+        width: 49%
+        display: flex
+        justify-content: flex-end
+
+
+
+        .training-set__button
+            background: none
+            padding: 0
+            margin: 0
+            border: none
+            font-size: 2.1rem
+            font-family: $stock_font
+            cursor: pointer
+            color: #0f3341
+            position: relative
+
+            &::before
+                content: " ";
+                height: 1px
+                width: 6.1rem
+                right: -7.0rem
+                top: calc(0.7em - 2px)
+                position: absolute
+                background: #0f3341
+
+        .training-set__content
+            display: flex
+            max-width: 64.3rem
+            max-width: 84.3rem
+            font-size: 1.7rem
+            justify-content: flex-end
+            text-align: left
+
+
+            &.training-set__content--lg
+                max-width: 92rem
+
+            .training-set__title
+                font-family: $bold_font
+                font-size: 3.9rem
+                text-transform: uppercase
+                line-height: 4rem
+                margin-bottom: 0
+                position: relative
+
+                &::before
+                    content: " "
+                    position: absolute
+                    height: 5px
+                    width: 5.7rem
+                    background: #0f3341
+                    left: -6.7rem
+                    top: 50%
+
+            .training-set__text
+                margin-top: 1.2rem
+                max-width: 30.2rem
+
+        .training-set__img
+            height: 30rem
+            width: 30rem
+            object-fit: cover
+
+        .training-set__about
+            font-size: 1.7rem
+            font-family: $stock_font
+            padding-left: 3rem
+            padding-right: 3rem
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: left
+
+            .training-set__title
+                margin-top: 0
+
+        &:nth-child(even)
+            justify-content: flex-start
+
+        &.training-set__item--reverse
+            .training-set__about
+                align-items: right
+                text-align: right 
+            .training-set__img
+                order: 1
+            .training-set__button
+                &::before
+                    right: auto
+                    left: -7.0rem
+
+            .training-set__title
+                &::before
+                    right: -6.7rem
+                    left: auto 
+#block-training
+    padding-top: 5rem
+    .block-title
+        padding-bottom: 5.9rem
+        
 @import "media" // Всегда в конце
