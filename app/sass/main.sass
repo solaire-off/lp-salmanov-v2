@@ -2,6 +2,20 @@
 @import "libs"
 @import "vars"
 @import "base"
+@mixin optional-at-root($sel) 
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} 
+        @content;
+
+@mixin placeholder
+    @include optional-at-root('::-webkit-input-placeholder')
+        @content;
+    @include optional-at-root(':-moz-placeholder') 
+        @content;
+    @include optional-at-root('::-moz-placeholder') 
+        @content;
+    @include optional-at-root(':-ms-input-placeholder') 
+        @content;
+
 
 body
     color: #0f3341;
@@ -356,4 +370,74 @@ body
     .block-title
         padding-bottom: 5.9rem
         
+
+.send-message
+    padding: 5.7rem 1.7rem 3.7rem 3.2rem
+    background: #eeeeee
+
+    .form
+        display: flex
+        flex-direction: column
+        align-items: right
+
+    .send-message__field
+        width: 74.1rem
+        background: transparent
+        border: none
+        border-bottom: 2px solid #0f3341
+        margin-bottom: 5.5rem
+        font-size: 3rem
+        font-family: $stock_font
+        @include placeholder 
+              color: #0f3341
+              opacity: 1
+
+        &:last-child
+            margin-bottom: 0
+    .send-message__button
+        padding: 1.7rem 1.3rem
+        background: transparent
+        color: #0f3341
+        border: 2px solid #0f3341
+        font-size: 3rem
+        font-family: $stock_font
+        cursor: pointer
+        transition: all 0.2s
+
+        &:hover,
+        &:focus
+            color: #eeeeee
+            background: #0f3341
+
+.contact-info
+    margin-left: 23rem
+    position: relative
+    align-self: center
+    background: white
+    .contact-info__title
+        font-family: $bold_font
+        font-size: 3.9rem
+        text-transform: uppercase
+    .contact-info__content
+        font-size: 3rem
+
+    &::before
+        content: ' '
+        z-index: -1
+        display: block
+        position: absolute
+        left: -23rem
+        bottom: -9.5rem
+        width: 34.3rem
+        height: 45.1rem
+        border: 3px solid #0f3341;
+
+#block-contact
+    display: flex
+    max-width: 150rem
+    margin: 0 auto
+    justify-content: space-between
+    padding-top: 27.2rem
+    padding-bottom: 22.3rem
+
 @import "media" // Всегда в конце
