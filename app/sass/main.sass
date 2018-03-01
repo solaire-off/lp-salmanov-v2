@@ -1,0 +1,119 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+.container
+    
+.header-line
+    font-family: 'PBR'
+    text-transform: uppercase
+    position: relative
+    z-index: 2
+
+    .header-line__title
+        font-size: 15.4rem
+        line-height: 11.8rem
+        margin: 0
+    .header-line__subtitle
+        font-size: 3.9rem
+        margin-top: 6rem
+        margin-bottom: 0
+
+
+.header-img
+    background: url(../img/hipstor.png)
+    background-position: center
+    object-fit: cover
+    width: 134.5rem
+    height: 90rem
+    z-index: 1
+
+
+    .header-img__year
+        font-family: 'OSEB'
+        width: 15rem
+        height: 16rem
+        background: white
+        background: rgba(255,255,255,0.62)
+
+        display: flex;
+        align-items: flex-start
+        justify-content: center
+
+        padding-top: 1.6rem
+        font-size: 3.9rem
+        p
+            margin-top: 0
+
+.v-social
+    display: flex;
+    flex-direction: column
+    width: 5rem
+    position: relative
+
+    &::before
+      content: " "
+      display: block
+      position: absolute
+      left: 50%;
+      margin-left: -2px
+      width: 2px
+      height: 100%
+      background: #009fe3
+      z-index: -1
+
+    .v-social__button
+        margin-bottom: 6.6rem
+        width: 5rem
+        height: 5rem
+        border-radius: 50%
+        background: #009fe3
+
+        &:last-child
+            margin-bottom: 0
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .v-social__image
+
+
+.circle-letter
+    position: relative
+    &::before
+        content: " "
+        width: 1.25em
+        height: 1.25em
+        position: absolute
+        margin-left: -.3em
+        margin-top: -.25em
+        border: 3px solid #00ffff 
+        border-radius: 50%
+        z-index: -1
+
+
+#block-header
+    background: #eeeeee
+    color: #0a3544
+    .header-line
+        margin-left: 20.6rem
+        padding-top: 31.3rem 
+        padding-bottom: 18.8rem 
+    .header-img
+        position: absolute
+        right: 0
+        top: 0
+
+        .header-img__year
+            position: absolute
+            right: 51rem
+            bottom: 0
+
+        .v-social
+            position: absolute
+            right: 9rem
+            top: 23.5rem
+
+@import "media" // Всегда в конце
