@@ -3,6 +3,8 @@
 @import "base"
 @import "vars"
 
+body
+    color: #0f3341;
 .container
     
 .header-line
@@ -88,10 +90,40 @@
         height: 1.25em
         position: absolute
         margin-left: -.3em
-        margin-top: -.25em
+        margin-top: -.27em
         border: 3px solid #00ffff 
         border-radius: 50%
         z-index: -1
+
+.row
+    display: flex
+
+    .col
+        flex: 1
+
+    &.is-center
+        justify-content: center
+
+.about
+    .about__content
+        max-width: 59rem
+        font-size: 3rem
+        .title
+            font-family: 'OSEB'
+            text-transform: uppercase
+            margin-top: 0
+            margin-bottom: 7.7rem
+            font-size: 6.5rem
+
+    .about__img-wrap
+        display: flex;
+        justify-content: flex-end
+        align-items: flex-start
+        .about__img
+            max-width: 74.6rem
+            height: auto
+            margin-right: 18.6rem
+
 
 
 #block-header
@@ -116,4 +148,23 @@
             right: 9rem
             top: 23.5rem
 
+
+#block-about
+    margin-top: 17rem
+
+    .about
+        .about__img
+
+        .about__content
+            .title
+                position: relative
+                &::after
+                    content: " "
+                    display: block
+                    position: absolute
+                    bottom: 1px;
+                    height: 1px;
+                    width: 150%;
+                    margin-left: -20%
+                    background: #0f3341
 @import "media" // Всегда в конце
